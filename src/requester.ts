@@ -16,7 +16,7 @@ export class Requester {
 		// Handle the response if the status code isn't 200(OK)
 		if (response.status !== 200) {
 			switch (response.status) {
-				// If there iss no content
+				// If there is no content
 				case 404 || 204:
 					throw new RessourceNotFound(uri);
 
