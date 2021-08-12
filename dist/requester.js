@@ -56,7 +56,7 @@ var Requester = /** @class */ (function () {
                         // Handle the response if the status code isn't 200(OK)
                         if (response.status !== 200) {
                             switch (response.status) {
-                                // If there iss no content
+                                // If there is no content
                                 case 404 || 204:
                                     throw new exceptions_1.RessourceNotFound(uri);
                                 // If the User is unauthorized
