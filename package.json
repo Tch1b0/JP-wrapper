@@ -1,31 +1,31 @@
 {
-  "name": "jp-wrapper",
-  "version": "1.0.0",
-  "description": "This is a wrapper for the JP-backend",
-  "main": "index.js",
-  "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "bnr": "tsc && node ./dist/index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Tch1b0/JP-wrapper.git"
-  },
-  "keywords": [
-    "wrapper",
-    "typescript",
-    "requests"
-  ],
-  "author": "Tch1b0",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Tch1b0/JP-wrapper/issues"
-  },
-  "homepage": "https://github.com/Tch1b0/JP-wrapper#readme",
-  "devDependencies": {
-    "@types/showdown": "^1.9.4",
-    "axios": "^0.21.1",
-    "showdown": "^1.9.1"
-  }
+	"name": "jp-wrapper",
+	"version": "1.0.0",
+	"description": "This is a wrapper for the JP-backend",
+	"main": "index.js",
+	"scripts": {
+		"build": "tsc",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"bnr": "tsc && node ./dist/index.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Tch1b0/JP-wrapper.git"
+	},
+	"keywords": [
+		"wrapper",
+		"typescript",
+		"requests"
+	],
+	"author": "Tch1b0",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Tch1b0/JP-wrapper/issues"
+	},
+	"homepage": "https://github.com/Tch1b0/JP-wrapper#readme",
+	"dependencies": {
+		"@types/showdown": "^1.9.4",
+		"axios": "^0.21.1",
+		"showdown": "^1.9.1"
+	}
 }
