@@ -1,5 +1,5 @@
 import axios from "axios";
-import { RessourceNotFound, WrongCredentials } from "./exceptions";
+import { RessourceNotFound, ServerError, WrongCredentials } from "./exceptions";
 import { url as origin_url } from "./url";
 
 export class Requester {
@@ -17,12 +17,19 @@ export class Requester {
 		if (response.status !== 200) {
 			switch (response.status) {
 				// If there is no content
-				case 404 || 204:
+				case 404:
+					throw new RessourceNotFound(uri);
+
+				case 204:
 					throw new RessourceNotFound(uri);
 
 				// If the User is unauthorized
 				case 401:
 					throw new WrongCredentials();
+
+				// If there is an internal server error
+				case 500:
+					throw new ServerError();
 			}
 		}
 

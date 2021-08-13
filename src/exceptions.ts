@@ -15,3 +15,9 @@ export class WrongCredentials {
 		return "The Credentials are wrong";
 	}
 }
+
+export class ServerError {
+	toString() {
+		return "The server ran into some fatal issues...";
+	}
+}
