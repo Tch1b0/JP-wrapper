@@ -6,3 +6,6 @@ export declare class RessourceNotFound {
 export declare class WrongCredentials {
     toString(): string;
 }
+export declare class ServerError {
+    toString(): string;
+}

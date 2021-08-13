@@ -57,11 +57,16 @@ var Requester = /** @class */ (function () {
                         if (response.status !== 200) {
                             switch (response.status) {
                                 // If there is no content
-                                case 404 || 204:
+                                case 404:
+                                    throw new exceptions_1.RessourceNotFound(uri);
+                                case 204:
                                     throw new exceptions_1.RessourceNotFound(uri);
                                 // If the User is unauthorized
                                 case 401:
                                     throw new exceptions_1.WrongCredentials();
+                                // If there is an internal server error
+                                case 500:
+                                    throw new exceptions_1.ServerError();
                             }
                         }
                         return [2 /*return*/, response.data];
